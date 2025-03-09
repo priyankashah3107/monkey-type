@@ -27,7 +27,9 @@ const Navbar = async () => {
       {!session ? (
         <nav className="flex flex-row justify-between px-10 py-6 items-center">
           <div className="flex flex-row gap-4">
-            <h1 className="cursor-pointer font-bold text-2xl">MonkeyType</h1>
+            <h1 className="cursor-pointer font-bold text-2xl text-yellow-400">
+              MonkeyType
+            </h1>
             <Keyboard className="cursor-pointer mt-2" />
           </div>
           <Link href={"/signin"} className="cursor-pointer">
@@ -37,20 +39,25 @@ const Navbar = async () => {
       ) : (
         <nav className="flex flex-row justify-between px-10 py-6 items-center">
           <div className="flex flex-row gap-4">
-            <h1 className="cursor-pointer font-bold text-2xl">MonkeyType</h1>
+            <h1 className="cursor-pointer font-bold text-2xl text-yellow-400">
+              MonkeyType
+            </h1>
             <Keyboard className="cursor-pointer mt-2" />
           </div>
           <div>
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 text-yellow-400">
                   <User />
                   <p>{session?.user.email}</p>
                 </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuLabel>
-                  <Link href={"/account"} className="flex flex-row gap-1">
+                  <Link
+                    href={"/account"}
+                    className="flex flex-row gap-1 text-yellow-400"
+                  >
                     <BarChart />
                     <p>User Stats</p>
                   </Link>
